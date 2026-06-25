@@ -65,7 +65,6 @@ Gym_Sample_Websitep/
 - [ ] Online membership registration
 - [ ] Workout and diet plan management
 - [ ] Customer testimonials and reviews
-- [ ] Image gallery improvements (rename `gallary.html` → `gallery.html`)
 - [ ] Online payment integration
 - [ ] Admin dashboard
 - [ ] Class schedule system
