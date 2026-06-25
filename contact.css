@@ -1,0 +1,174 @@
+/* ============================================
+   CONTACT PAGE - PREMIUM DARK THEME
+   Author: Senior Front-end Developer
+   Description: Full-screen contact sections with
+   info cards, map, and CTA.
+   ============================================ */
+
+
+/* --------------------------------------------
+   HERO SECTION (Contact page)
+-------------------------------------------- */
+.hero-section {
+  background: radial-gradient(ellipse at 70% 30%, rgba(225,6,0,0.15), transparent 60%),
+              linear-gradient(135deg, #0a0a0a 0%, #000 100%);
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 900px;
+}
+
+.hero-section p {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------
+   HIGHLIGHTS SECTION (Contact Info Cards)
+-------------------------------------------- */
+.highlights-section {
+  background: var(--color-bg-card);
+}
+
+.highlights-section h2 {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.highlights-section h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-card {
+  width: 100%;
+  background: var(--color-bg-dark);
+  padding: var(--space-lg) var(--space-md);
+  border: 1px solid rgba(225, 6, 0, 0.2);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+  animation: card-fade-up linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes card-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlight-card:hover {
+  border-color: var(--color-red);
+  transform: translateY(-8px);
+}
+
+.highlight-card h3 {
+  color: var(--color-red);
+  margin-bottom: var(--space-sm);
+  font-size: 2rem;
+}
+
+.highlight-card p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+/* --------------------------------------------
+   MAP SECTION (using gallery-grid-section)
+-------------------------------------------- */
+.gallery-grid-section {
+  background: var(--color-bg-dark);
+  text-align: center;
+}
+
+.gallery-grid-section h2 {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.gallery-grid-section h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-map {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card);
+  border: 2px solid transparent;
+  transition: border-color var(--transition-smooth);
+}
+
+.footer-map:hover {
+  border-color: var(--color-red);
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  filter: grayscale(100%) invert(10%);
+  opacity: 0.9;
+  transition: filter var(--transition-smooth), opacity var(--transition-smooth);
+  display: block;
+}
+
+.footer-map iframe:hover {
+  filter: grayscale(50%) invert(5%);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hide the main nav on mobile, show the toggle button */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* Hide the toggle button and sidebar on desktop */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+  .mobile-sidebar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-main section {
+    animation: none;
+  }
+}
+

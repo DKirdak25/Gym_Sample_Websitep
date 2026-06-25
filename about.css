@@ -1,0 +1,228 @@
+/* ============================================
+   ABOUT PAGE - PREMIUM DARK THEME
+   Author: Senior Front-end Developer
+   Description: Full-screen sections with story,
+   mission, facilities, and CTA.
+   ============================================ */
+
+
+/* --------------------------------------------
+   HERO SECTION (About page)
+-------------------------------------------- */
+.hero-section {
+  background: radial-gradient(ellipse at 70% 30%, rgba(225,6,0,0.15), transparent 60%),
+              linear-gradient(135deg, #0a0a0a 0%, #000 100%);
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 900px;
+}
+
+.hero-section p {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------
+   ABOUT STORY SECTION (two-column layout)
+-------------------------------------------- */
+.about-story-section {
+  background: var(--color-bg-card);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about-image {
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 2px solid transparent;
+  transition: border-color var(--transition-smooth), transform var(--transition-smooth);
+}
+
+.about-image:hover {
+  border-color: var(--color-red);
+  transform: scale(1.02);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-smooth);
+  filter: grayscale(20%);
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.about-content {
+  padding: var(--space-lg);
+  animation: card-fade-up linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes card-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-content h2 {
+  color: var(--color-red);
+  margin-bottom: var(--space-sm);
+}
+
+.about-content p {
+  margin-bottom: var(--space-md);
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------
+   HIGHLIGHTS SECTION (Mission/Vision/Values)
+-------------------------------------------- */
+.highlights-section {
+  background: var(--color-bg-dark);
+}
+
+.highlights-section h2 {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.highlights-section h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.highlight-card {
+  background: var(--color-bg-card);
+  padding: var(--space-lg) var(--space-md);
+  border: 1px solid rgba(225, 6, 0, 0.2);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+  animation: card-fade-up linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0% entry 100%;
+}
+
+.highlight-card:hover {
+  border-color: var(--color-red);
+  transform: translateY(-8px);
+}
+
+.highlight-card h3 {
+  color: var(--color-red);
+  margin-bottom: var(--space-sm);
+  font-size: 2rem;
+}
+
+.highlight-card p {
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------
+   FACILITIES SECTION (Gallery grid)
+-------------------------------------------- */
+.gallery-grid-section {
+  background: var(--color-bg-card);
+}
+
+.gallery-grid-section h2 {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.gallery-grid-section h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.gallery-item {
+  overflow: hidden;
+  background: var(--color-bg-dark);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.9), 0 0 0 2px var(--color-red);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth);
+  filter: grayscale(30%);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+
+@media (max-width: 768px) {
+
+  /* About story stacks */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    padding: var(--space-md) 0;
+  }
+
+  .about-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
