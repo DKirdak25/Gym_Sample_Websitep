@@ -45,25 +45,20 @@ Below is the actual project structure in this repository (root level):
 ```
 Gym_Sample_Websitep/
 ├── README.md                # Project documentation (this file)
-├── home.html                # Home page (site entry)
+├── index.html                # index page (site entry)
 ├── about.html               # About page
 ├── contact.html             # Contact page
-├── gallary.html             # Gallery page (note: filename is "gallary.html")
+├── gallery.html             # Gallery page
 ├── trainers.html            # Trainers / staff page
 ├── main.js                  # JavaScript for interactive features
 ├── style.css                # Global styles
-├── home.css                 # Home page styles
+├── index.css                 # Index page styles
 ├── about.css                # About page styles
 ├── contact.css              # Contact page styles
 ├── gallery.css              # Gallery page styles
 ├── trainers.css             # Trainers page styles
 └── images/                  # Image assets used across the site
 ```
-
-Notes:
-- The repository uses page-specific CSS files alongside a global `style.css`.
-- There is no `index.html` or `script.js` file in this repository; the entry page is `home.html` and the JavaScript file is `main.js`.
-- The gallery page filename is spelled `gallary.html` — consider renaming it to `gallery.html` for consistency if you plan to change filenames.
 
 ## 🔮 Future Enhancements
 
