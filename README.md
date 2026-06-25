@@ -1,97 +1,64 @@
-# Gym Sample Website
+Local Gym Website
 
-A lightweight, responsive static website template for a local gym/studio. Dark-themed marketing site with pages for Home, Trainers, Gallery, About, and Contact — ready to be served as static files or deployed to any static-hosting provider.
+Overview
 
-## Key details
-- WhatsApp / Phone: +91 9767761336 (prefilled WhatsApp links are included in CTAs)
-- Location: Amravati (address shown as "123 Main Road, Amravati")
-- Placeholder business name: `GymName`
-- Pages: `home.html`, `trainers.html`, `gallary.html` (note: filename spelling), `about.html`, `contact.html`
-- Global styles: `style.css`; page styles: `home.css`, `about.css`, `contact.css`, `gallery.css`, `trainers.css`
-- Interactivity: `main.js` (mobile menu toggle)
+This is a simple website designed for local gym owners to establish an online presence and provide essential information to potential members.
 
-## Features
-- Dark, modern UI with CSS design tokens and responsive layout
-- Hero sections, programs, membership pricing, trainer profiles, testimonials, and gallery
-- CTAs open WhatsApp with prefilled booking or enquiry messages
-- Mobile-friendly slide-in sidebar navigation
-- Google Maps embed placeholder in the footer
+The website helps visitors learn about the gym, view services, check membership plans, and contact the gym easily.
 
-## Stack
-- Languages: HTML, CSS, JavaScript (vanilla)
-- Static site — no build step required
+Features
 
-## Repository layout (top-level)
+- Responsive design for mobile and desktop devices
+- Home page with gym introduction
+- Services and training programs section
+- Membership plans and pricing
+- Contact information and inquiry form
+- Location and operating hours
+- Clean and easy-to-use interface
 
-```
-home.html
-about.html
-trainers.html
-gallary.html   # spelling in repo
-contact.html
-style.css
-home.css
-about.css
-gallery.css
-contact.css
-trainers.css
-main.js
-images/        # referenced image assets
-```
+Purpose
 
-## How it fits together
-Each page links the global `style.css` and a page-specific CSS file. `main.js` is included on every page to control the mobile hamburger menu and sidebar behavior. CTAs use WhatsApp deep links for bookings and queries. The project is ready to serve as static files from any static hosting provider.
+Many local gyms rely on word-of-mouth marketing. This website provides a professional online presence, making it easier for potential customers to discover the gym and learn about its services.
 
-## Quick start (local)
+Technologies Used
 
-1. Clone the repo
+- HTML
+- CSS
+- JavaScript
 
-   ```bash
-   git clone https://github.com/DKirdak25/Gym_Sample_Websitep.git
-   cd Gym_Sample_Websitep
-   ```
+Installation
 
-2. Quick preview (open locally)
-   - Open `home.html` (or `index.html` if you add/rename) in a browser.
+1. Download or clone the project files.
+2. Open the project folder.
+3. Launch "index.html" in a web browser.
 
-3. Serve with Python 3
+Project Structure
 
-   ```bash
-   python3 -m http.server 8000
-   # then visit http://localhost:8000/home.html
-   ```
+gym-website/
+│
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    ├── images/
+    └── icons/
 
-4. Or use `serve` (npm)
+Future Improvements
 
-   ```bash
-   npm install -g serve
-   serve -s . -l 3000
-   # then visit http://localhost:3000/home.html
-   ```
+- Online membership registration
+- Workout and diet plans
+- Customer testimonials
+- Gallery section
+- Online payment integration
+- Admin dashboard for gym management
 
-## Recommended improvements
-- Rename `home.html` → `index.html` so the site root serves the home page automatically.
-- Fix filename typo: `gallary.html` → `gallery.html` and update references.
-- Replace placeholders: `GymName`, address, phone, and Google Maps iframe src.
-- Add real images to `images/` and optimize them (WebP + fallbacks already referenced).
-- Add meta description and Open Graph tags for SEO.
-- Consider adding a small backend or serverless form to store bookings instead of relying on WhatsApp links.
+Target Audience
 
-## Contributing
-1. Fork the repository
-2. Create a branch for your change: `git checkout -b fix/some-change`
-3. Commit and push
-4. Open a pull request describing your changes
+- Local gym owners
+- Fitness centers
+- Personal trainers
+- Small fitness businesses
 
-Please keep changes focused and update any cross-file references when renaming files.
+Author
 
-## License
-Add a `LICENSE` file for the preferred license (suggested: MIT).
-
-## Want me to help?
-I can:
-- Add an `index.html` that redirects or rename `home.html` → `index.html`.
-- Fix the `gallary.html` → `gallery.html` typo and update references across files.
-- Add an `LICENSE` file (MIT) and a short `CONTRIBUTING.md`.
-
-Tell me which of these you'd like and I'll commit the changes.
+Created as a practice project to learn web development and build real-world business websites.
