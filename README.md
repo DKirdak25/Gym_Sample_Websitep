@@ -4,11 +4,11 @@ A professional website template designed for local gym owners to establish an on
 
 ## 📋 Overview
 
-This is a sample website built to help local gym owners create a strong online presence. The website provides an easy-to-navigate platform for potential members to discover services, view membership plans, and get in touch with the gym.
+This is a sample website built to help local gym owners create a strong online presence. The website provides an easy-to-navigate platform for potential members to discover services, view membership plans, and contact the gym.
 
 ## ✨ Features
 
-- **Responsive Design** - Works seamlessly on mobile, tablet, and desktop devices
+- **Responsive Design** - Works on mobile, tablet, and desktop devices
 - **Home Page** - Gym introduction and key highlights
 - **Services Section** - Showcase training programs and services
 - **Membership Plans** - Display pricing and membership options
@@ -35,27 +35,42 @@ Many local gyms struggle with online visibility. This template provides a profes
 
 1. **Clone or download** the repository
 2. **Open the project folder** in your code editor
-3. **Launch `index.html`** in your web browser
+3. **Launch `home.html`** (the site entry file) in your web browser
 4. **Customize** the content with your gym's information
 
 ## 📁 Project Structure
 
+Below is the actual project structure in this repository (root level):
+
 ```
-gym-website/
-├── index.html          # Main HTML file
-├── style.css           # Styling and layout
-├── script.js           # Interactive features
-└── assets/
-    ├── images/         # Gym and service images
-    └── icons/          # UI icons and graphics
+Gym_Sample_Websitep/
+├── README.md                # Project documentation (this file)
+├── home.html                # Home page (site entry)
+├── about.html               # About page
+├── contact.html             # Contact page
+├── gallary.html             # Gallery page (note: filename is "gallary.html")
+├── trainers.html            # Trainers / staff page
+├── main.js                  # JavaScript for interactive features
+├── style.css                # Global styles
+├── home.css                 # Home page styles
+├── about.css                # About page styles
+├── contact.css              # Contact page styles
+├── gallery.css              # Gallery page styles
+├── trainers.css             # Trainers page styles
+└── images/                  # Image assets used across the site
 ```
+
+Notes:
+- The repository uses page-specific CSS files alongside a global `style.css`.
+- There is no `index.html` or `script.js` file in this repository; the entry page is `home.html` and the JavaScript file is `main.js`.
+- The gallery page filename is spelled `gallary.html` — consider renaming it to `gallery.html` for consistency if you plan to change filenames.
 
 ## 🔮 Future Enhancements
 
 - [ ] Online membership registration
 - [ ] Workout and diet plan management
 - [ ] Customer testimonials and reviews
-- [ ] Image gallery
+- [ ] Image gallery improvements (rename `gallary.html` → `gallery.html`)
 - [ ] Online payment integration
 - [ ] Admin dashboard
 - [ ] Class schedule system
